@@ -16,4 +16,11 @@ func main() {
 	}
 
 	fmt.Println("Path:", path)
+
+	entries, err := os.ReadDir(path)
+
+	if err != nil {
+		fmt.Fprintln(os.Stderr, "Error:", err)
+		os.Exit(1)
+	}
 }
