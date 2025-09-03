@@ -11,6 +11,7 @@ func main() {
 
 	var path string
 
+	// Check, set and print path variable
 	if len(os.Args) == 1 {
 		path = "."
 	} else {
@@ -19,6 +20,7 @@ func main() {
 
 	fmt.Println("Path:", path)
 
+	// Read directory and handle error
 	entries, err := os.ReadDir(path)
 
 	if err != nil {
